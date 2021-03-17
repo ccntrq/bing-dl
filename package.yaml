@@ -1,0 +1,47 @@
+name:                hs-bing-dl
+version:             0.1.0
+license:             BSD3
+author:              "Alexander Pankoff"
+maintainer:          "ccntrq@screenri.de"
+copyright:           "2021 Alexander Pankoff"
+
+extra-source-files:
+- README.md
+- LICENSE
+
+dependencies:
+- base-noprelude
+- bytestring
+- cond
+- directory
+- lens
+- protolude
+- terminal-progress-bar
+- text
+- wreq
+- xml-conduit
+
+library:
+  source-dirs: src
+  ghc-options:
+    - -Wall
+    - -Werror
+    - -O2
+  default-extensions:
+    - OverloadedStrings
+
+executables:
+  bing-dl:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Werror
+    - -O2
+    default-extensions:
+    - OverloadedStrings
+    dependencies:
+    - hs-bing-dl
