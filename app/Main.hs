@@ -22,17 +22,13 @@ main = do
 data Options = Opts
   { optHelp        :: Bool
   , optVersion     :: Bool
-  , optFetch       :: Bool
   , optLibraryPath :: Text
   }
   deriving Show
 
 defaultOptions :: Options
-defaultOptions = Opts { optHelp        = False
-                      , optVersion     = False
-                      , optFetch       = False
-                      , optLibraryPath = "~/wallpaper/"
-                      }
+defaultOptions =
+  Opts { optHelp = False, optVersion = False, optLibraryPath = "~/wallpaper/" }
 
 options :: [GetOpt.OptDescr (Options -> Options)]
 options =
