@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo ln -s $(realpath etc/systemd/user/bing-dl.timer) /etc/systemd/user/
+sudo ln -s $(realpath etc/systemd/user/bing-dl.service) /etc/systemd/user/
+
+systemctl --user enable bing-dl.timer

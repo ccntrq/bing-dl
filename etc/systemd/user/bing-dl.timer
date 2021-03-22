@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs bing-dl periodically
+Requires=bing-dl.service
+
+[Timer]
+Unit=bing-dl.service
+OnStartupSec=5m
+OnUnitActiveSec=6h
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=hs-bing-dl Daemon
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/bing-dl
+
+[Install]
+WantedBy=default.target
