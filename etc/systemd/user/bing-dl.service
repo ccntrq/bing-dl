@@ -1,9 +1,7 @@
 [Unit]
 Description=bing-dl Daemon
+Wants=bing-dl.timer
 
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/bing-dl
-
-[Install]
-WantedBy=default.target
