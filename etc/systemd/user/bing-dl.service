@@ -1,5 +1,5 @@
 [Unit]
-Description=hs-bing-dl Daemon
+Description=bing-dl Daemon
 
 [Service]
 Type=oneshot
