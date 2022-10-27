@@ -39,7 +39,7 @@ options =
       (\libraryDir opts -> opts { optLibraryPath = T.pack libraryDir })
       "[DIR]"
     )
-    "Provide a custom library path"
+    "Provide a custom library path (default: ~/wallpaper)"
   , GetOpt.Option ['v']
                   ["version"]
                   (GetOpt.NoArg (\opts -> opts { optVersion = True }))
